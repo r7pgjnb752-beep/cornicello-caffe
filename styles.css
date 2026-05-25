@@ -290,7 +290,7 @@ h3 {
   position: relative;
   z-index: 4;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   width: min(1180px, calc(100% - 80px));
   margin: -34px auto 0;
   overflow: hidden;
@@ -469,6 +469,74 @@ h3 {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 0.94rem;
+}
+
+.eco-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1fr);
+  gap: 70px;
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 76px 0 86px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+
+.eco-section h2 {
+  max-width: 520px;
+  margin-bottom: 0;
+  font-size: 3.35rem;
+  line-height: 1.04;
+}
+
+.eco-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.eco-grid article {
+  min-height: 250px;
+  padding: 26px;
+  color: var(--cream);
+  background:
+    linear-gradient(145deg, rgba(31, 23, 19, 0.32), rgba(116, 128, 107, 0.78)),
+    var(--sage);
+  border-radius: 8px;
+}
+
+.eco-grid article:nth-child(2) {
+  background:
+    linear-gradient(145deg, rgba(31, 23, 19, 0.2), rgba(74, 47, 38, 0.86)),
+    var(--espresso);
+}
+
+.eco-grid article:nth-child(3) {
+  background:
+    linear-gradient(145deg, rgba(31, 23, 19, 0.18), rgba(167, 50, 25, 0.78)),
+    var(--red);
+}
+
+.eco-grid span {
+  display: block;
+  margin-bottom: 34px;
+  color: #f3d1a7;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.eco-grid h3 {
+  margin-bottom: 12px;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.eco-grid p {
+  margin-bottom: 0;
+  color: rgba(255, 248, 237, 0.78);
+  line-height: 1.55;
 }
 
 .team-section {
@@ -1500,6 +1568,7 @@ h3 {
 
   .feature-intro,
   .beans-section,
+  .eco-section,
   .team-header,
   .team-grid,
   .services-section,
@@ -1553,6 +1622,18 @@ h3 {
   .story-heading h2,
   .beans-copy h2 {
     font-size: 3.3rem;
+  }
+
+  .eco-section h2 {
+    font-size: 3rem;
+  }
+
+  .eco-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-grid article {
+    min-height: 0;
   }
 
   .services-header h2 {
@@ -1726,6 +1807,7 @@ h3 {
 
   .feature-intro,
   .beans-section,
+  .eco-section,
   .team-header,
   .team-grid,
   .services-section,
@@ -1755,6 +1837,7 @@ h3 {
 
   .story-heading h2,
   .beans-copy h2,
+  .eco-section h2,
   .services-header h2 {
     font-size: 2.35rem;
     line-height: 1.06;
@@ -1773,6 +1856,23 @@ h3 {
 
   .beans-section {
     padding: 52px 0;
+  }
+
+  .eco-section {
+    padding: 52px 0;
+  }
+
+  .eco-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .eco-grid article {
+    padding: 24px 22px;
+  }
+
+  .eco-grid span {
+    margin-bottom: 24px;
   }
 
   .beans-panel figure,
