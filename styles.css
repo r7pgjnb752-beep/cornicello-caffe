@@ -818,6 +818,65 @@ h3 {
   justify-self: start;
 }
 
+.contact-panel {
+  display: grid;
+  gap: 14px;
+  max-width: 760px;
+  margin-top: 4px;
+  padding: 24px;
+  background: rgba(255, 248, 237, 0.1);
+  border: 1px solid rgba(255, 248, 237, 0.22);
+  border-radius: 8px;
+}
+
+.contact-panel[hidden] {
+  display: none;
+}
+
+.contact-panel:focus {
+  outline: 2px solid rgba(243, 209, 167, 0.58);
+  outline-offset: 4px;
+}
+
+.contact-panel h3 {
+  margin-bottom: 0;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.contact-panel p {
+  margin-bottom: 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.contact-panel .button.secondary {
+  color: var(--cream);
+  border-color: rgba(255, 248, 237, 0.38);
+  background: rgba(255, 248, 237, 0.08);
+}
+
+.contact-panel .button.secondary:hover,
+.contact-panel .button.secondary:focus-visible {
+  border-color: var(--cream);
+  background: rgba(255, 248, 237, 0.16);
+  outline: none;
+}
+
+.copy-status {
+  min-height: 1.4em;
+  color: #f3d1a7;
+  font-weight: 900;
+}
+
 .office-layout {
   min-height: 100vh;
   background:
@@ -881,6 +940,8 @@ h3 {
   padding: 0 18px;
   border: 1px solid transparent;
   border-radius: 8px;
+  cursor: pointer;
+  font: 800 1rem/1 var(--sans);
   font-weight: 800;
 }
 

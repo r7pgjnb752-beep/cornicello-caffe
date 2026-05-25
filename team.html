@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Team | Cornicello Caff&egrave;</title>
     <meta name="description" content="Meet the people behind Cornicello Caff&egrave;.">
-    <link rel="stylesheet" href="styles.css?v=team-polish">
+    <link rel="stylesheet" href="styles.css?v=contact-panel">
+    <script src="script.js?v=contact-panel" defer></script>
   </head>
   <body class="team-page">
     <header class="site-nav site-nav-page">
@@ -75,7 +76,20 @@
           <a href="tel:+19058685875">905-868-5875</a>
           <a href="https://www.cornicellocaffe.ca">www.cornicellocaffe.ca</a>
         </div>
-        <a class="button primary" href="mailto:cornicellocaffe@gmail.com">Contact us</a>
+        <button class="button primary" type="button" data-contact-trigger aria-expanded="false" aria-controls="contact-options">Contact us</button>
+        <div class="contact-panel" id="contact-options" tabindex="-1" hidden>
+          <h3>Start with a few details.</h3>
+          <p>
+            Tell us which service you are interested in, where you are located,
+            and the employee, visitor, or guest count you have in mind.
+          </p>
+          <div class="contact-actions">
+            <a class="button secondary" href="mailto:cornicellocaffe@gmail.com?subject=Cornicello%20Caff%C3%A8%20inquiry">Open email</a>
+            <a class="button secondary" href="tel:+19058685875">Call us</a>
+            <button class="button secondary" type="button" data-copy-email>Copy email</button>
+          </div>
+          <p class="copy-status" aria-live="polite"></p>
+        </div>
       </section>
     </main>
   </body>
