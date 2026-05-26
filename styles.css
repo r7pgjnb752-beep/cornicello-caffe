@@ -1599,8 +1599,8 @@ h3 {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(280px, 0.58fr);
-  gap: 78px;
+  grid-template-columns: minmax(0, 0.82fr) minmax(220px, 0.42fr) minmax(240px, 0.46fr);
+  gap: 52px;
   width: min(1180px, calc(100% - 80px));
   margin: 0 auto;
   align-items: start;
@@ -1622,13 +1622,19 @@ h3 {
   line-height: 1.65;
 }
 
-.footer-info {
+.footer-info,
+.footer-contact {
   display: grid;
   gap: 14px;
   justify-items: start;
 }
 
-.footer-info h2 {
+.footer-contact {
+  font-style: normal;
+}
+
+.footer-info h2,
+.footer-contact h2 {
   margin-bottom: 8px;
   font-family: var(--sans);
   font-size: 2.35rem;
@@ -1636,7 +1642,8 @@ h3 {
   line-height: 1.05;
 }
 
-.footer-info a {
+.footer-info a,
+.footer-contact a {
   color: rgba(255, 248, 237, 0.88);
   font-size: 1.08rem;
   font-weight: 800;
@@ -1644,21 +1651,19 @@ h3 {
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 6px;
+  overflow-wrap: anywhere;
 }
 
 .footer-info a:hover,
 .footer-info a:focus-visible,
-.footer-bottom a:hover,
-.footer-bottom a:focus-visible {
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
   color: var(--cream);
   outline: none;
   text-decoration-color: currentColor;
 }
 
 .footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
   width: min(1180px, calc(100% - 80px));
   margin: 54px auto 0;
   padding-top: 24px;
@@ -1671,12 +1676,15 @@ h3 {
   margin-bottom: 0;
 }
 
-.footer-bottom a {
-  color: rgba(255, 248, 237, 0.78);
-  font-weight: 750;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 6px;
+.copyright-stamp {
+  display: inline-flex;
+  padding: 8px 12px;
+  color: rgba(255, 248, 237, 0.74);
+  border: 1px solid rgba(255, 248, 237, 0.18);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .legal-page {
@@ -1867,11 +1875,6 @@ h3 {
   .legal-content {
     grid-template-columns: 1fr;
     gap: 34px;
-  }
-
-  .footer-bottom {
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .legal-main {
@@ -2380,11 +2383,13 @@ h3 {
     font-size: 1.72rem;
   }
 
-  .footer-info h2 {
+  .footer-info h2,
+  .footer-contact h2 {
     font-size: 1.85rem;
   }
 
-  .footer-info a {
+  .footer-info a,
+  .footer-contact a {
     font-size: 1rem;
   }
 
