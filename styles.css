@@ -701,7 +701,7 @@ h3 {
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -731,6 +731,10 @@ h3 {
 
 .service-card:nth-child(3) {
   background: rgba(245, 220, 205, 0.78);
+}
+
+.service-card:nth-child(4) {
+  background: rgba(227, 235, 238, 0.78);
 }
 
 .service-topline {
@@ -763,6 +767,10 @@ h3 {
 
 .service-card:nth-child(3) .service-number {
   color: var(--espresso);
+}
+
+.service-card:nth-child(4) .service-number {
+  color: var(--blue);
 }
 
 .service-card h3 {
@@ -826,6 +834,10 @@ h3 {
   background: var(--espresso);
 }
 
+.service-card:nth-child(4) li::before {
+  background: var(--blue);
+}
+
 .card-link {
   display: inline-flex;
   margin-top: auto;
@@ -843,6 +855,10 @@ h3 {
 
 .service-card:nth-child(3) .card-link {
   color: var(--espresso);
+}
+
+.service-card:nth-child(4) .card-link {
+  color: var(--blue);
 }
 
 .process-section {
@@ -1479,6 +1495,48 @@ h3 {
   background: #f3d1a7;
 }
 
+.supplies-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.58fr) minmax(0, 1fr);
+  gap: 62px;
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto 88px;
+  padding-top: 64px;
+  border-top: 1px solid var(--line);
+}
+
+.supplies-section h2 {
+  max-width: 640px;
+  margin-bottom: 18px;
+  font-size: 3.35rem;
+  line-height: 1.04;
+}
+
+.supplies-section p:not(.eyebrow) {
+  max-width: 540px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.64;
+}
+
+.supplies-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  align-content: start;
+}
+
+.supplies-list span {
+  min-height: 48px;
+  padding: 14px 16px;
+  color: var(--ink);
+  background: rgba(255, 248, 237, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 850;
+}
+
 .visual-feature {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.7fr);
@@ -1581,6 +1639,7 @@ h3 {
   .service-summary-strip,
   .service-detail-section,
   .pricing-section,
+  .supplies-section,
   .visual-feature,
   .related-services {
     grid-template-columns: 1fr;
@@ -1673,6 +1732,7 @@ h3 {
 
   .service-detail-section,
   .pricing-section,
+  .supplies-section,
   .visual-feature {
     gap: 30px;
   }
@@ -1819,6 +1879,7 @@ h3 {
   .service-summary-strip,
   .service-detail-section,
   .pricing-section,
+  .supplies-section,
   .visual-feature,
   .related-services {
     width: min(100% - 28px, 760px);
@@ -1978,9 +2039,19 @@ h3 {
 
   .service-detail-section h2,
   .pricing-section h2,
+  .supplies-section h2,
   .visual-feature h2,
   .related-services h2 {
     font-size: 2.25rem;
+  }
+
+  .supplies-section {
+    margin-bottom: 58px;
+    padding: 52px 0 0;
+  }
+
+  .supplies-list {
+    grid-template-columns: 1fr;
   }
 
   .option-card,
